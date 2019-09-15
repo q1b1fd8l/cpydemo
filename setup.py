@@ -1,13 +1,30 @@
 #!/usr/bin/python
 
-from distutils.core import setup, Extension
+import setuptools
 
-setup(
-    name='cpydemo',
-    version='0.0.1',
-    author='',
-    author_email='',
-    url='',
-    ext_modules=[Extension('cpydemo', sources=['cpydemo/cpydemo.c'])]
+with open('README.md', 'r', encoding='utf-8') as fd:
+	desc_data = fd.read()
+
+setuptools.setup(
+	name =    'cpydemo',
+	version = '0.0.1',
+	author  = 'q1b1fd8l',
+	author_email = 'q1b1fd8l@yandex.com',
+	description  = 'A simple example',
+	long_description = desc_data,
+	long_description_content_type = 'text/markdown',
+	url = 'https://github.com/q1b1fd8l/cpydemo',
+	packages = setuptools.find_packages(),
+	classifiers=[
+		'Development Status :: 4 - Beta',
+		'Intended Audience :: Developers',
+		'License :: OSI Approved :: MIT License',
+		'Operating System :: OS Independent',
+		'Programming Language :: Python',
+		'Programming Language :: Python :: 3',
+		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: Implementation :: PyPy',
+		'Topic :: Internet :: WWW/HTTP :: Indexing/Search',
+	],
+    ext_modules=[setuptools.Extension('cpydemo', sources=['cpydemo/cpydemo.c'])]
 )
-
