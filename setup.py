@@ -8,6 +8,6 @@ setup(
     author='',
     author_email='',
     url='',
-    ext_modules=[Extension('cpydemo', sources=['cpydemo\cpydemo.c'])]
+    ext_modules=[Extension('cpydemo', sources=['cpydemo/cpydemo.c'])]
 )
 
